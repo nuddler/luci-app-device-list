@@ -28,14 +28,14 @@ jobs:
         docker pull openwrt/sdk
         docker run --rm -u root -v "$(pwd)"/bin/:/home/build/openwrt/bin -v ${{ github.workspace }}/.github/workflows:/home/build/workflows openwrt/sdk /bin/sh /home/build/workflows/build.sh
     - name: Upload app
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: luci-app-device-list
         path: ./bin/packages/x86_64/base/*device-list*
         if-no-files-found: error
     - name: Upload Log
       if: ${{ always() }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: buildlog
         path: bin/logs.tar.xz
