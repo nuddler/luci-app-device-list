@@ -1,5 +1,6 @@
 #!/bin/sh
 
+./setup.sh
 sed -i 's/git\.openwrt\.org\/project\/luci/github\.com\/openwrt\/luci/g' ./feeds.conf.default
 ./scripts/feeds update luci
 ./scripts/feeds install luci
