@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e -o nounset
 
 ./setup.sh
 sed -i 's/git\.openwrt\.org\/project\/luci/github\.com\/openwrt\/luci/g' ./feeds.conf.default

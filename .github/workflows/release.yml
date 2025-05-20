@@ -19,7 +19,7 @@ jobs:
       - name: Docker Build
         run: |
           docker pull openwrt/sdk
-          docker run --rm -u root -v "$(pwd)"/bin/:/home/build/openwrt/bin -v ${{ github.workspace }}/.github/workflows:/home/build/workflows -v "${{ github.workspace }}/setup.sh":/builder/setup.sh openwrt/sdk /bin/sh /home/build/workflows/build.sh
+          docker run --rm -u root -v "$(pwd)"/bin/:/builder/bin -v ${{ github.workspace }}/.github/workflows:/builder/workflows -v "${{ github.workspace }}/setup.sh":/builder/setup.sh openwrt/sdk /bin/sh /home/build/workflows/build.sh
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
