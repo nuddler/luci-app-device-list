@@ -15,7 +15,7 @@ jobs:
     - name: Prepare
       run: |
         mkdir -p bin/luci-app-device-list
-        cp -rf ./luasrc ./root ./Makefile ./files ./bin/luci-app-device-list
+        cp -rf luasrc root Makefile files ./bin/luci-app-device-list
     - name: Docker Build
       run: |
         docker pull openwrt/sdk
