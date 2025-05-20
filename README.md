@@ -9,22 +9,22 @@
 } -->
 
 [license]: /LICENSE
-[license-badge]: https://img.shields.io/github/license/jerrykuku/luci-app-argon-config?style=flat-square&a=1
-[prs]: https://github.com/jerrykuku/luci-app-argon-config/pulls
+[license-badge]: https://img.shields.io/github/license/jerrykuku/luci-app-device-list?style=flat-square&a=1
+[prs]: https://github.com/jerrykuku/luci-app-device-list/pulls
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
-[issues]: https://github.com/jerrykuku/luci-app-argon-config/issues/new
+[issues]: https://github.com/jerrykuku/luci-app-device-list/issues/new
 [issues-badge]: https://img.shields.io/badge/Issues-welcome-brightgreen.svg?style=flat-square
-[release]: https://github.com/jerrykuku/luci-app-argon-config/releases
-[release-badge]: https://img.shields.io/github/v/release/jerrykuku/luci-app-argon-config?include_prereleases&style=flat-square
-[download]: https://github.com/jerrykuku/luci-app-argon-config/releases
-[download-badge]: https://img.shields.io/github/downloads/jerrykuku/luci-app-argon-config/total?style=flat-square
+[release]: https://github.com/jerrykuku/luci-app-device-list/releases
+[release-badge]: https://img.shields.io/github/v/release/jerrykuku/luci-app-device-list?include_prereleases&style=flat-square
+[download]: https://github.com/jerrykuku/luci-app-device-list/releases
+[download-badge]: https://img.shields.io/github/downloads/jerrykuku/luci-app-device-list/total?style=flat-square
 [contact]: https://t.me/jerryk6
 [contact-badge]: https://img.shields.io/badge/Contact-telegram-blue?style=flat-square
 [en-us-link]: /README.md
 [zh-cn-link]: /README_ZH.md
 [en-us-release-log]: /RELEASE.md
 [zh-cn-release-log]: /RELEASE_ZH.md
-[config-link]: https://github.com/jerrykuku/luci-app-argon-config/releases
+[config-link]: https://github.com/jerrykuku/luci-app-device-list/releases
 [lede]: https://github.com/coolsnowwolf/lede
 [official]: https://github.com/openwrt/openwrt
 [immortalwrt]: https://github.com/immortalwrt/immortalwrt
@@ -67,9 +67,9 @@ The table below will provide a detailed introduction:
 
 ```bash
 cd lede/package/lean
-rm -rf luci-app-argon-config # if have
-git clone -b 18.06 https://github.com/jerrykuku/luci-app-argon-config.git luci-app-argon-config
-make menuconfig #choose LUCI->Application->Luci-app-argon-config
+rm -rf luci-app-device-list # if have
+git clone -b 18.06 https://github.com/jerrykuku/luci-app-device-list.git luci-app-device-list
+make menuconfig #choose LUCI->Application->luci-app-device-list
 make -j1 V=s
 ```
 
@@ -77,15 +77,15 @@ make -j1 V=s
 
 ```bash
 cd openwrt/package
-git clone https://github.com/jerrykuku/luci-app-argon-config.git
-make menuconfig #choose LUCI->Application->Luci-app-argon-config
+git clone https://github.com/jerrykuku/luci-app-device-list.git
+make menuconfig #choose LUCI->Application->luci-app-device-list
 make -j1 V=s
 ```
 
 ## Contributors
 
-<a href="https://github.com/jerrykuku/luci-app-argon-config/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=jerrykuku/luci-app-argon-config" />
+<a href="https://github.com/jerrykuku/luci-app-device-list/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=jerrykuku/luci-app-device-list" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).

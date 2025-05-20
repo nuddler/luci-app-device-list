@@ -7,7 +7,7 @@ on:
     tags-ignore:
       - 'release-*'
     paths:
-      - 'luci-app-argon-config/**'
+      - 'luci-app-device-list/**'
   pull_request:
     branches:
       - master
@@ -21,8 +21,8 @@ jobs:
       uses: actions/checkout@master
     - name: Prepare
       run: |
-        mkdir -p bin/luci-app-argon-config
-        cp -rf ./luasrc ./po ./root ./Makefile ./bin/luci-app-argon-config
+        mkdir -p bin/luci-app-device-list
+        cp -rf ./luasrc ./root ./Makefile ./files ./bin/luci-app-device-list
     - name: Docker Build
       run: |
         docker pull openwrt/sdk
@@ -30,8 +30,8 @@ jobs:
     - name: Upload app
       uses: actions/upload-artifact@v3
       with:
-        name: luci-app-argon-config
-        path: ./bin/packages/x86_64/base/*argon-config*
+        name: luci-app-device-list
+        path: ./bin/packages/x86_64/base/*device-list*
         if-no-files-found: error
     - name: Upload Log
       if: ${{ always() }}

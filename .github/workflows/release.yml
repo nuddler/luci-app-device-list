@@ -14,8 +14,8 @@ jobs:
       uses: actions/checkout@master
     - name: Prepare
       run: |
-        mkdir -p bin/luci-app-argon-config
-        cp -rf ./luasrc ./po ./root ./Makefile ./bin/luci-app-argon-config
+        mkdir -p bin/luci-app-device-list
+        cp -rf ./luasrc ./root ./Makefile ./files ./bin/luci-app-device-list
     - name: Docker Build
       run: |
         docker pull openwrt/sdk
@@ -26,7 +26,7 @@ jobs:
       run: |
         set -x
         assets=()
-        for asset in ./bin/packages/x86_64/base/*argon-config*.ipk; do
+        for asset in ./bin/packages/x86_64/base/*device-list*.ipk; do
           assets+=("-a" "$asset")
         done
         tag_name=$(basename ${{github.ref}})
