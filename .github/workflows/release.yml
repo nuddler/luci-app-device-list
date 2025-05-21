@@ -20,6 +20,10 @@ jobs:
         run: |
           docker pull openwrt/sdk
           docker run --rm -u root -v "$(pwd)"/bin/:/builder/bin -v ${{ github.workspace }}/.github/workflows:/builder/workflows -v "${{ github.workspace }}/setup.sh":/builder/setup.sh openwrt/sdk /bin/sh /builder/workflows/build.sh
+      - name: Install hub
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hub
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
