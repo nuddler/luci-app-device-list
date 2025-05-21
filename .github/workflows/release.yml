@@ -29,8 +29,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -x
+          ls -la ./bin/packages/x86_64/base/
           assets=()
-          for asset in ./bin/packages/x86_64/base/*device-list*.ipk; do
+          for asset in ./bin/packages/x86_64/base/*device-list*.*; do
             assets+=("-a" "$asset")
           done
           tag_name=$(basename ${{github.ref}})
